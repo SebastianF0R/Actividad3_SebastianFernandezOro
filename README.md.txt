@@ -1,3 +1,7 @@
-# Actividad 3
+# Actividad 3 - GitHub
 
-Repositorio correspondiente a la Actividad 3.
+## Datos personales:
+
+Sebastian Fernandez Oro Ricaud
+00536963
+T.I.
