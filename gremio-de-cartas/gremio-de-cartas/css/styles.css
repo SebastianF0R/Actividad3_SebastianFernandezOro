@@ -1,0 +1,444 @@
+/* ============================================================
+   GREMIO DE CARTAS — hoja de estilos
+   Paleta: índigo profundo, ciruela, dorado foil, pergamino, magenta holo
+   Tipografía: Spectral (títulos, tono de "lore") + Space Grotesk (datos/stats)
+   ============================================================ */
+
+:root {
+  --indigo: #1b1036;
+  --plum: #3a1f5d;
+  --gold: #c9a227;
+  --parchment: #f4eedd;
+  --holo: #c23b6b;
+  --ink: #241636;
+
+  --font-display: "Spectral", Georgia, serif;
+  --font-data: "Space Grotesk", "Segoe UI", sans-serif;
+
+  --max-width: 1120px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--parchment);
+  color: var(--ink);
+  font-family: var(--font-data);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.wrap {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  margin: 0 0 0.5em;
+  color: var(--indigo);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+p {
+  max-width: 62ch;
+}
+
+/* ============================================================
+   ENCABEZADO Y NAVEGACIÓN
+   ============================================================ */
+.site-header {
+  background: var(--indigo);
+  color: var(--parchment);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 3px solid var(--gold);
+}
+
+.site-header .wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  color: var(--parchment);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.logo span {
+  color: var(--gold);
+}
+
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--parchment);
+  font-size: 0.95rem;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+  transition: border-color 0.2s ease;
+}
+
+.main-nav a:hover {
+  border-color: var(--gold);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero {
+  padding: 64px 0;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-copy {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-copy h1 {
+  font-size: clamp(2.3rem, 5vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 0.3em;
+}
+
+.hero-copy .lede {
+  font-size: 1.1rem;
+  color: #4a3f63;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 14px 28px;
+  background: var(--holo);
+  color: var(--parchment);
+  text-decoration: none;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: var(--font-data);
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background: #9c2f56;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  border-radius: 3px;
+  box-shadow: 8px 8px 0 var(--gold);
+  max-width: 420px;
+}
+
+/* ============================================================
+   SECCIÓN: CATÁLOGO
+   ============================================================ */
+.catalog-section {
+  background: #ece2c6;
+  padding: 72px 0;
+  border-top: 1px solid #d8cba0;
+  border-bottom: 1px solid #d8cba0;
+}
+
+.catalog-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.catalog-list {
+  list-style: none;
+  margin: 24px 0 0;
+  padding: 0;
+}
+
+.catalog-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+  border-bottom: 1px dashed #b9ab7e;
+  font-family: var(--font-data);
+}
+
+.catalog-list .item-name {
+  font-weight: 600;
+}
+
+.catalog-list .item-price {
+  color: var(--holo);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.catalog-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.catalog-photos img {
+  border-radius: 3px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.catalog-photos figure {
+  margin: 0;
+}
+
+.catalog-photos figcaption {
+  font-size: 0.8rem;
+  color: #6b5f45;
+  margin-top: 6px;
+}
+
+.guarantee {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #b9ab7e;
+  font-size: 0.9rem;
+  color: #6b5f45;
+}
+
+/* ============================================================
+   SECCIÓN: EVENTOS
+   ============================================================ */
+.events-section {
+  padding: 72px 0;
+}
+
+.events-section .wrap {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.schedule {
+  margin: 20px 0 0;
+  padding-left: 1.2em;
+}
+
+.schedule li {
+  padding: 8px 0;
+  border-bottom: 1px dashed #cbbf99;
+}
+
+.schedule .day {
+  font-weight: 600;
+  color: var(--plum);
+}
+
+/* ============================================================
+   SECCIÓN: NOSOTROS (dentro de eventos, columna derecha)
+   ============================================================ */
+blockquote {
+  margin: 24px 0 0;
+  padding-left: 20px;
+  border-left: 3px solid var(--gold);
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--plum);
+}
+
+/* ============================================================
+   SECCIÓN: CONTACTO
+   ============================================================ */
+.contact-section {
+  background: var(--indigo);
+  color: var(--parchment);
+  padding: 72px 0;
+}
+
+.contact-section h2 {
+  color: var(--parchment);
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.contact-info p {
+  color: #cfc4e8;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.contact-info li {
+  padding: 6px 0;
+}
+
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: var(--parchment);
+}
+
+input,
+textarea {
+  padding: 12px 14px;
+  border: 1px solid #4a3568;
+  border-radius: 3px;
+  background: #281a47;
+  color: var(--parchment);
+  font-family: var(--font-data);
+  font-size: 1rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #9a8cb8;
+}
+
+textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+form .btn {
+  justify-self: start;
+}
+
+/* ============================================================
+   PIE DE PÁGINA
+   ============================================================ */
+.site-footer {
+  background: #150a29;
+  color: #b8adcf;
+  padding: 32px 0;
+  font-size: 0.9rem;
+}
+
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #b8adcf;
+}
+
+.social-links a:hover {
+  color: var(--gold);
+}
+
+/* ============================================================
+   RESPONSIVO
+   ============================================================ */
+@media (max-width: 780px) {
+  .site-header .wrap {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .main-nav ul {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .catalog-layout,
+  .events-section .wrap,
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+  }
+}
