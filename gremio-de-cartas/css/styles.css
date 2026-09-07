@@ -129,11 +129,21 @@ p {
    HERO
    ============================================================ */
 .hero {
+  padding: 64px 0;
+}
+
+.hero-grid {
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   align-items: center;
   gap: 40px;
-  padding: 64px 0;
+}
+
+.hero-copy {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .hero-copy h1 {
@@ -166,9 +176,15 @@ p {
   background: #9c2f56;
 }
 
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
 .hero-image img {
   border-radius: 3px;
   box-shadow: 8px 8px 0 var(--gold);
+  max-width: 420px;
 }
 
 /* ============================================================
@@ -406,7 +422,7 @@ form .btn {
     justify-content: center;
   }
 
-  .hero,
+  .hero-grid,
   .catalog-layout,
   .events-section .wrap,
   .contact-layout {
