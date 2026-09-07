@@ -234,6 +234,14 @@ p {
   margin-top: 6px;
 }
 
+.guarantee {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #b9ab7e;
+  font-size: 0.9rem;
+  color: #6b5f45;
+}
+
 /* ============================================================
    SECCIÓN: EVENTOS
    ============================================================ */
